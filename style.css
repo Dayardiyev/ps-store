@@ -1,0 +1,442 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+
+
+/* ============================================== VARIABLES ============================================== */
+
+:root{
+    --btn-color: #0072CE;
+    --dark-grey-font: #383838;
+    --dark-grey-border: #383838;
+    --dark-grey-bg: #1f1f1f;
+    --grey-font: #C4C4C4;
+}
+
+/* ============================================== GLOBAL ============================================== */
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    margin: 0;
+    min-width: 1200px;
+    height: 100%;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--dark-grey-bg);
+}
+
+button{
+    background-color: var(--btn-color);
+    border: none;
+    color: #fff;
+    padding: 5px 15px;
+    box-shadow: 0px 0px 15px var(--btn-color);
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.title{
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    margin: 35px 0;
+}
+
+.sony{
+    width: 100%;
+    height: 36px;
+    background-color: #000;
+    display: flex;
+    justify-content: flex-end;
+    padding: 11px 10px;
+}
+
+/* --=========== Platfrom ==========-- */
+
+.ps{
+    height: 16px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+/* ============================================== HEADER ============================================== */
+
+.header{
+    height: 64px;
+    padding: 11px 10px;
+    background-color: #fff;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-cta{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.header-select select,
+.header-select select option{
+    border: none;
+    background-color: #fff;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    color: var(--dark-grey-font);
+}
+
+.header-fav, .header-cart{
+    display: flex;
+    color: var(--dark-grey-font);
+
+    font-size: 23px;
+}
+
+.header-search input{
+    max-width: 142px;
+    height: 30px;
+    padding: 10px 10px 10px 30px;
+    background: url(img/header/search_icon.svg) no-repeat scroll 10px;
+    outline: none;
+    border: none;
+    background-color: #F8F8F8;
+    border-radius: 7px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ============================================== MAIN ============================================== */
+
+.main{
+    color: var(--grey-font);
+    height: 100%;
+    background-color: var(--dark-grey-bg);
+    background-image: url("img/hero/Hero_Background.png");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    padding-bottom: 60px;
+}
+
+.container{
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/* ============================================== HERO ============================================== */
+
+
+.hero{
+    padding-top: 15px;
+    height: 468px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.hero-wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav{
+    width: 100%;    
+}
+
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.nav-wrapper .nav-left span{
+    color: #fff;
+    font-weight: 800;
+}
+
+.hero-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-img img{
+    width: 100%;
+}
+
+.hero-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+
+/* ============================================== TRENDING ============================================== */
+
+.trending{
+    color: #fff;
+}
+
+.trending-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.trending-item{
+    background-image: url("img/trending/item-1.png");
+    max-width: 370px;
+    height: 128px;
+    padding: 12px 0 0 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    flex: 1;
+}
+
+.trending-item:nth-child(2){
+    background-image: url("img/trending/item-2.png");
+}
+
+.trending-item:nth-child(3){
+    background-image: url("img/trending/item-3.png");
+}
+
+.trending-item .trending-item-title{
+    text-align: center;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.trending-item .trending-cta{
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    gap: 11px;
+}
+
+.trending-btn button{
+    padding: 0;
+    border-radius: 10px 0;
+    font-weight: 600;
+    font-size: 12px;
+    width: 89px;
+    height: 26px;
+}
+
+/* ============================================== NEW-REALEASE ============================================== */
+
+.new-release-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px 27.5px;
+}
+
+.game-item{
+    width: 172px;
+    height: 278px;
+    border: 1px solid var(--dark-grey-border);
+    border-radius: 10px;
+    position: relative;
+}
+
+.game-platform{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.game-platform .ps{
+    background-color: #1f1f1f;
+    color: var(--grey-font);
+    border: 1px solid var(--dark-grey-border);
+}
+
+.game-platform .game-icon{
+    display: flex;
+}
+
+.game-btn{
+    margin-top: 13px;
+}
+
+.game-btn button{
+    width: 159px;
+    height: 26px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+}
+
+.game-btn button span{
+    color: var(--grey-font);
+    text-decoration: line-through;
+}
+
+.game-text{
+    padding: 0 6px;
+}
+
+.game-name{
+    font-weight: 800;
+    color: #fff;
+}
+
+.game-dev{
+    margin-bottom: 11px;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.game-item-img{
+    position: relative;
+}
+
+.game-sale-percentage{
+    position: absolute;
+    bottom: 11px;
+    right: 7px;
+    background: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 38px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+
+/* ============================================== PS-NOW ============================================== */
+
+.ps-now{
+    background-image: url(img/ps-now/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 0 250px;
+    margin: 60px 0;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    gap: 150px;
+}
+
+.ps-now-text{
+    padding-top: 50px;
+    /* margin-right: 300px; */
+}
+
+.ps-now-sub{
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 100px;
+    margin: 10px 0 40px 0;
+}
+
+.ps-now-btn{
+    padding-left: 100px;
+}
+
+.ps-now-btn button{
+    background: rgba(56, 56, 56, 0.3);
+    box-shadow: unset;
+    border: 1px solid var(--btn-color);
+    padding: 0;
+    font-size: 16px;
+    width: 130px;
+    height: 33px;
+}
+
+.ps-now-img img{
+    height: 455px;
+}
+
+/* ============================================== SALES ============================================== */
+
+.sales-wrapper{
+    margin-bottom: 30px;
+}
+
+/* ============================================== PS-PLUS ============================================== */
+
+.ps-plus{
+    background-image: url(img/ps-plus/bg.png);
+    color: #fff;
+    padding: 0 0 0 50px;
+}
+
+.ps-plus-text{
+    margin-right: 300px;
+}
+
+.ps-plus-sub{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+.ps-plus-btn button{
+    background-color: #FDD635;
+    border: 1px solid #FDD635;
+}
+
+/* ============================================== FOOTER ============================================== */
+
+footer{
+    height: 575px;
+    background-color: #003697;
+    color: #fff;
+    padding: 60px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.footer-wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer-text{
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    gap: 10px;
+    height: 100%;
+}
+
+.footer-section{
+    padding: 50px 0;
+    height: 100%;
+    display: flex;  
+    flex-direction: column;
+    gap: 25px; 
+}
+
+
+.footer-copy{
+    text-align: center;
+    font-size: 16px;
+}
